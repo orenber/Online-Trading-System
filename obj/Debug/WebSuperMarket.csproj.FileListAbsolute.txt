@@ -1,0 +1,12 @@
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\bin\WebApplication2.pdb
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Debug\WebApplication2.dll
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Debug\WebApplication2.pdb
+E:\גיבוי דיסק\כונן D\WebApplication2\bin\WebApplication2.dll.config
+E:\גיבוי דיסק\כונן D\WebApplication2\bin\WebApplication2.dll
+E:\גיבוי דיסק\כונן D\WebApplication2\bin\WebApplication2.pdb
+E:\גיבוי דיסק\כונן D\WebApplication2\obj\Debug\WebSuperMarket.csprojResolveAssemblyReference.cache
+E:\גיבוי דיסק\כונן D\WebApplication2\obj\Debug\WebSuperMarket.csproj.CoreCompileInputs.cache
+E:\גיבוי דיסק\כונן D\WebApplication2\obj\Debug\WebApplication2.dll
+E:\גיבוי דיסק\כונן D\WebApplication2\obj\Debug\WebApplication2.pdb
