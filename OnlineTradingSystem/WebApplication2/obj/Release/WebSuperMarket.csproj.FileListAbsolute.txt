@@ -1,0 +1,17 @@
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\bin\WebApplication2.pdb
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.dll
+C:\Documents and Settings\user\my documents\visual studio 2010\Projects\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.pdb
+C:\Documents and Settings\user\Desktop\Dot.Net\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll
+C:\Documents and Settings\user\Desktop\Dot.Net\OnlineTradingSystem\WebApplication2\bin\WebApplication2.pdb
+C:\Documents and Settings\user\Desktop\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\user\Desktop\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.dll
+C:\Documents and Settings\user\Desktop\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.pdb
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll.config
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\bin\WebApplication2.pdb
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebSuperMarket.csprojResolveAssemblyReference.cache
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebSuperMarket.csproj.CoreCompileInputs.cache
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.dll
+E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.pdb
