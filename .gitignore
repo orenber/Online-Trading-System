@@ -3,3 +3,19 @@
 ################################################################################
 
 /OnlineTradingSystem/OnlineTrading.Tests/obj/Debug
+/OnlineTradingSystem/OnlineTradingSystemTests/obj/Debug
+/OnlineTradingSystem/packages/MSTest.TestAdapter.1.2.0/build/_common
+/OnlineTradingSystem/packages/MSTest.TestAdapter.2.1.2/build/netcoreapp1.0
+/OnlineTradingSystem/packages/MSTest.TestAdapter.2.1.2/build/uap10.0
+/OnlineTradingSystem/packages/MSTest.TestAdapter.2.1.2/build/_common
+/OnlineTradingSystem/packages/MSTest.TestFramework.1.2.0/lib/net45
+/OnlineTradingSystem/packages/MSTest.TestFramework.1.2.0
+/OnlineTradingSystem/packages/MSTest.TestFramework.2.1.2/lib/net45/cs
+/OnlineTradingSystem/packages/MSTest.TestFramework.2.1.2
+/OnlineTradingSystem/packages/NUnit.3.12.0
+/OnlineTradingSystem/packages/NUnitTestAdapter.2.3.0
+/OnlineTradingSystem/UnitTest
+/OnlineTradingSystem/OnlineTrading.Tests/bin/Debug
+/OnlineTradingSystem/packages/MSTest.TestAdapter.1.2.0
+/OnlineTradingSystem/packages/MSTest.TestAdapter.2.1.2/build/net45
+/OnlineTradingSystem/packages/MSTest.TestAdapter.2.1.2

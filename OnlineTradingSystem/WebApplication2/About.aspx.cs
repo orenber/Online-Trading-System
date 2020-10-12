@@ -26,7 +26,7 @@ namespace WebApplication2
 
         List<AsyncPostBackTrigger> trigger = new List<AsyncPostBackTrigger>();
 
-        DAL dalsql = new DAL();
+        DA dalsql = new DA();
 
            //String Name = "ProductName";
            //String Price = "ProductPrice";
@@ -75,7 +75,7 @@ namespace WebApplication2
            
             Store regis = new Store { StoreId = storeId };
             regis=dalsql.ImportStoreDataById(regis);
-            storenamelabel.Text = regis.Getstorename;
+            storenamelabel.Text = regis.Storename;
             //Ask for the selected number of product 
             Prod= dalsql.ImportSqlData(regis);
 

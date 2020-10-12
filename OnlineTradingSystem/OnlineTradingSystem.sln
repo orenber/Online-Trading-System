@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTradingSystem", "Onli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSuperMarket", "WebApplication2\WebSuperMarket.csproj", "{88140A72-88BF-4CE9-9AA2-0386C00D298B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnlineTrading.Tests", "OnlineTrading.Tests\OnlineTrading.Tests.csproj", "{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,18 @@ Global
 		{88140A72-88BF-4CE9-9AA2-0386C00D298B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{88140A72-88BF-4CE9-9AA2-0386C00D298B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{88140A72-88BF-4CE9-9AA2-0386C00D298B}.Release|x86.ActiveCfg = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Debug|x86.Build.0 = Debug|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|x86.ActiveCfg = Release|Any CPU
+		{91F0D36B-C80B-496F-9D89-0C7DEAAC14B3}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

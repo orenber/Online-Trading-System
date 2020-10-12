@@ -12,6 +12,7 @@ namespace OnlineTradingSystem
         #region DAta Member
         //DAta Member
         private string password;
+        private string email;
         private string username;
         private string marketname;
         private string storename;
@@ -36,25 +37,33 @@ namespace OnlineTradingSystem
         }
 
         //2.oveloded constructor
-        public Uregistration(string Password, string Username)
+        public Uregistration(string Password, string Username,string email)
         {
             password = Password;
             username = Username;
+            email = Email;
 
         }
-        
+
         #endregion
 
         #region Properties
         //Propertise Method
-        public string Getpassword
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+
+        }
+
+        public string Password
         {
             get { return password; }
             set { password = value; }
 
         }
 
-        public string Getusername
+        public string Username
         {
 
             get { return username; }
@@ -62,14 +71,14 @@ namespace OnlineTradingSystem
 
         }
 
-        public string Getmarketname
+        public string Marketname
         {
             get { return marketname; }
             set { marketname = value; }
 
         }
 
-        public string Getstorename
+        public string Storename
         {
             get { return storename; }
             set { storename = value; }
@@ -94,6 +103,7 @@ namespace OnlineTradingSystem
         public int Count { get; set; }
         public DateTime DateUpdate { get; set; }
         public string Description { get; set; }
+        public string Manufactore { get; set; }
         public byte[] img { get; set; }
         public string url { get; set; }
 
@@ -207,30 +217,21 @@ namespace OnlineTradingSystem
      {
        
 
-
          public Store()
          { }
 
-        public Store(string Password, string Username)
+        public Store(string email,string password)
         {
             // TODO: Complete member initialization
-            Getpassword = Password;
-            Getusername = Username;
+            Password = password;
+            Email = email;
+       
+           
         }
-
-
-
+ 
          public Int32 StoreId { get; set; }
          public DateTime RegisterDate { get; set; }
 
-         
-       
-      
-         
-       
-     
-     
-     
      }
 
       

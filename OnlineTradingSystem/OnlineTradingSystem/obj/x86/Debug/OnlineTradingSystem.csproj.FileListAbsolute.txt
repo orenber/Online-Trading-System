@@ -83,3 +83,35 @@ E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropb
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.Properties.Resources.resources
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.csproj.GenerateResource.cache
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.csproj.CoreCompileInputs.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.exe.config
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.exe
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.csprojResolveAssemblyReference.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Registration.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\DatagridStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\BorderStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\ImageStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\Shared.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\DataStore.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\ButtonStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\ScrolViewerStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Style\TabStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\SuperMarket.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\Registration.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\DataStore.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\SuperMarket.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\App.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem_MarkupCompile.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.g.resources
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.Properties.Resources.resources
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.csproj.GenerateResource.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.csproj.CoreCompileInputs.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.exe
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\OnlineTradingSystem_Content.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\ASPNETDB.MDF
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\aspnetdb_log.ldf
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\Database1.mdf
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\Database1_log.LDF
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\LogIn.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\LogIn.g.cs

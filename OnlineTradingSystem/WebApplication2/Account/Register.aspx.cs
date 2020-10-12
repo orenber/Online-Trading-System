@@ -6,7 +6,7 @@ namespace WebApplication2.Account
     public partial class Register : System.Web.UI.Page
     {
         Customer customer;
-        DAL dal = new DAL();
+        DA dal = new DA();
 
         protected void Page_Load(object sender, EventArgs e)
         {

@@ -15,3 +15,10 @@ E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropb
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebSuperMarket.csproj.CoreCompileInputs.cache
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.dll
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll.config
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\bin\WebApplication2.dll
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\bin\WebApplication2.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\obj\Release\WebSuperMarket.csprojResolveAssemblyReference.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\obj\Release\WebSuperMarket.csproj.CoreCompileInputs.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.dll
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\WebApplication2\obj\Release\WebApplication2.pdb

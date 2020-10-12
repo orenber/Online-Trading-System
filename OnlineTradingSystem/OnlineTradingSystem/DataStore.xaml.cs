@@ -35,7 +35,7 @@ namespace OnlineTradingSystem
         {
             InitializeComponent();
             regis = _ur;
-            NameofStore.Text = regis.Getstorename;
+            NameofStore.Text = regis.Storename;
         }
         public MainWindow()
         {
@@ -386,7 +386,7 @@ namespace OnlineTradingSystem
 
         private void Export_data_Click(object sender, RoutedEventArgs e)
         {
-            DAL sqlmetode = new DAL();
+            DA sqlmetode = new DA();
 
 
 
@@ -411,7 +411,7 @@ namespace OnlineTradingSystem
            
             products=new List<Product>();
            
-            DAL sqldata=new DAL();
+            DA sqldata=new DA();
            
             products = sqldata.ImportSqlData(regis);
 
@@ -432,7 +432,7 @@ namespace OnlineTradingSystem
 
         #region Window Loadaed
 
-        DAL sqldata = new DAL();
+        DA sqldata = new DA();
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
@@ -499,7 +499,7 @@ namespace OnlineTradingSystem
                 
             };
 
-            if (products[i].img.Length>1000)
+            if (products[i].img!=null)
             {
 
                 byte[] imageBytes = products[i].img;
@@ -679,7 +679,7 @@ namespace OnlineTradingSystem
             //BinaryReader br = new BinaryReader(fs);
             //products[products.Count].img = br.ReadBytes((int)fs.Length);
 
-            DAL sqlCom = new DAL();
+            DA sqlCom = new DA();
             sqlCom.SaveImageToSql(products, index);
 
 
@@ -697,7 +697,7 @@ namespace OnlineTradingSystem
         #region Product Sales Click
         private void Product_Sales_Click(object sender, RoutedEventArgs e)
         {
-            DAL dal = new DAL();
+            DA dal = new DA();
 
 
 
@@ -713,7 +713,7 @@ namespace OnlineTradingSystem
 
         private void Custumer_List_click(object sender, RoutedEventArgs e)
         {
-            DAL dal = new DAL();
+            DA dal = new DA();
 
 
 

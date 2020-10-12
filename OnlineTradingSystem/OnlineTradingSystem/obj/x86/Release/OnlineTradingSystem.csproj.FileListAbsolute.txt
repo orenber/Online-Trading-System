@@ -79,3 +79,30 @@ E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropb
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\SuperMarket.g.cs
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\UserPassword.g.cs
 E:\גיבוי דיסק\כונן C\Documents and Settings\user\My Documents\Dropbox\Dot.Net\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\App.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Release\OnlineTradingSystem.exe.config
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Release\OnlineTradingSystem.exe
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Release\OnlineTradingSystem.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.csprojResolveAssemblyReference.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Registration.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\DatagridStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\BorderStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\ImageStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\Shared.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\DataStore.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\ButtonStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\ScrolViewerStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Style\TabStyle.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\SuperMarket.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\UserPassword.baml
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\Registration.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\DataStore.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\SuperMarket.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\UserPassword.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\App.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem_MarkupCompile.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.g.resources
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.Properties.Resources.resources
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.csproj.GenerateResource.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.csproj.CoreCompileInputs.cache
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.exe
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Release\OnlineTradingSystem.pdb

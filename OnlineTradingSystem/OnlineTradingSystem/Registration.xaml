@@ -7,19 +7,28 @@
         WindowStyle="SingleBorderWindow" WindowStartupLocation="CenterScreen" UseLayoutRounding="True" 
         ResizeMode="NoResize" Topmost="True">
     <Grid>
-   
-            
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="63,191,0,0" Name="textBlocktablename" Text="Market Name:" VerticalAlignment="Top" />
-            <TextBlock Height="23" HorizontalAlignment="Left" Margin="80,151,0,0" Name="textBlockpassword" Text="Password:" VerticalAlignment="Top" />
-        
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,68,0,0" Name="UserNameText_Edit" VerticalAlignment="Top" Width="120" />
-        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,109,0,0" Name="StoreNameText_Edit" VerticalAlignment="Top" Width="120" />
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="66,29,0,0" Name="textBlockusername" Text="User name:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,29,0,0" Name="UserNameText_Edit" VerticalAlignment="Top" Width="120" />
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="94,68,0,0" x:Name="textBlockusername_Copy" Text="Email:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,68,0,0" Name="EmailText_Edit" VerticalAlignment="Top" Width="120" />
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="73,109,0,0" Name="textBlock_Password" Text="Password:" VerticalAlignment="Top" />
+        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,109,0,0" Name="passwordBoxText_Edit" VerticalAlignment="Top" Width="120" />
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="60,149,0,0" Name="textBlockstorename" Text="Store Name:" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="142,149,0,0" Name="StoreNameText_Edit" VerticalAlignment="Top" Width="120" />
+
+        <TextBlock Height="23" HorizontalAlignment="Left" Margin="50,188,0,0" Name="textBlockMarketName" Text="Market Name:" VerticalAlignment="Top" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="142,188,0,0" Name="MarketNameText_Edit" VerticalAlignment="Top" Width="120" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="76,68,0,0" Name="textBlockusername" Text="User name:" VerticalAlignment="Top" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="71,112,0,0" Name="textBlockstorename" Text="Store Name:" VerticalAlignment="Top" />
-        <TextBlock Height="23" HorizontalAlignment="Left" Margin="124,21,0,0" Name="textBlockRegistration" Text="Registration" VerticalAlignment="Top" />
-        <PasswordBox Height="23" HorizontalAlignment="Left" Margin="142,149,0,0" Name="passwordBoxText_Edit" VerticalAlignment="Top" Width="120" />
-        <Button Content="Register!" Height="23" HorizontalAlignment="Left" Margin="202,252,0,0" Name="Register" VerticalAlignment="Top" Width="75" Click="Register_Click" />
-        
+
+
+
+        <Button Content="Register!" Height="23" HorizontalAlignment="Left" Margin="187,256,0,0" Name="Register" VerticalAlignment="Top" Width="75" Click="Register_Click" />
+        <Button Content="Cancel!" Height="23" HorizontalAlignment="Left" Margin="50,256,0,0" Name="Cancel" VerticalAlignment="Top" Width="75" Click="Cancel_Click" />
+
+
+
     </Grid>
 </Window>

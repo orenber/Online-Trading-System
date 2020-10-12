@@ -9,14 +9,15 @@ using System.Configuration;
 
 namespace OnlineTradingSystem
 {
-    class DAL
+    class DA
     {
         private SqlConnection sc;
         private SqlCommand cmd;
         private SqlDataAdapter sqldap;
         private SqlDataReader reader;
+        private Store reg = new Store();
 
-        public DAL()
+        public DA()
         {
             #region  build Sql conection
             string ConnectionStrings = ConfigurationManager.ConnectionStrings["Online Trading System DBConnectionString"].ConnectionString;
@@ -34,31 +35,24 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-                cmd = new SqlCommand("dbo.ImportStore " + reg.StoreId, sc);
+                cmd = new SqlCommand("dbo.spImportStoreProducts " + reg.StoreId, sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                     if (Convert.IsDBNull((reader["Image"])))
-                     {
-
-                         continue;
-                     }
+             
                     pro.Add(new Product()
 
                     {
-                        ID = Convert.ToInt32(reader["ID"].ToString()),
-                        ProductName = Convert.ToString(reader["ProductName"]),
-                        Category = Convert.ToString(reader["Category"]),
-                        Price = Convert.ToInt32(reader["Price"]),
-                        Count = Convert.ToInt32(reader["Count"]),
-                        DateUpdate = Convert.ToDateTime(reader["DateUpdate"]),
-                        Instock = Convert.ToBoolean(reader["Instock"]),
-                        Description = Convert.ToString(reader["Description"]), 
-                        img = (byte[])(reader["Image"]),
-                        url = Convert.ToString(reader["url"])
-
-                        
+                        ID = Convert.ToInt32(reader["code"].ToString()),
+                        ProductName = Convert.ToString(reader["pname"]),
+                        Category = Convert.ToString(reader["utype"]),
+                        Price = Convert.ToInt32(reader["uprice"]),
+                        Count = Convert.ToInt32(reader["units"]),
+                        DateUpdate = Convert.ToDateTime(reader["updateDate"]),
+                        Description = Convert.ToString(reader["descr"]), 
+                        url = Convert.ToString(reader["urlink"])
+     
                     }
                        );
 
@@ -131,18 +125,16 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-                cmd = new SqlCommand("dbo.AllStoreName", sc);
+                cmd = new SqlCommand("dbo.spAllStoreName", sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
                     store.Add(new Store{
                     
-                        Getstorename=Convert.ToString(reader["StoreName"]),
-                        StoreId=Convert.ToInt16(reader["StoreId"])
-                    }); 
-                        
-                        
+                        Storename=Convert.ToString(reader["bname"]),
+                        StoreId=Convert.ToInt16(reader["bid"])
+                    });   
 
                 }
 
@@ -180,11 +172,11 @@ namespace OnlineTradingSystem
                 while (reader.Read())
                 {
 
-                    stor.Getstorename = Convert.ToString(reader["StoreName"]);
+                    stor.Storename = Convert.ToString(reader["StoreName"]);
                     stor.StoreId = Convert.ToInt16(reader["StoreId"]);
-                    stor.Getusername = Convert.ToString(reader["ManegerName"]);
+                    stor.Username = Convert.ToString(reader["ManegerName"]);
                     stor.RegisterDate = Convert.ToDateTime(reader["RegisterDate"]);
-                    stor.Getmarketname = Convert.ToString(reader["Market"]);
+                    stor.Marketname = Convert.ToString(reader["Market"]);
 
                 }
 
@@ -226,24 +218,27 @@ namespace OnlineTradingSystem
                 //cmd.ExecuteNonQuery();
                 for (int i = 0; prod.Count > i; i++)
                 {
-                    cmd = new SqlCommand("dbo.InsertUpdate "
+                    cmd = new SqlCommand("dbo.spProductInsertOrUpdate "
 
                     + reg.StoreId + ","
                     + prod[i].ID + ",'"
                     + prod[i].ProductName + "','"
                     + prod[i].Category + "',"
-                    + prod[i].Price + ","
-                    + prod[i].Instock + ","
-                    + prod[i].Count + ",'"
-                    + prod[i].DateUpdate + "','"
+                    + prod[i].Price + ",'"
                     + prod[i].Description + "','"
+                    + prod[i].Manufactore + "','"
                     + prod[i].url+"'" , sc);
 
                     cmd.ExecuteNonQuery();
-                    // export all the image
-                    cmd = new SqlCommand("dbo.UpdateImage " + prod[i].ID + ",@img", sc);
-                    cmd.Parameters.Add(new SqlParameter("@img", prod[i].img));
-                    cmd.ExecuteNonQuery();
+                    if (prod[i].img==null || prod[i].img.Length == 0)
+                    {
+                        continue;
+                    }
+                    else
+                    {
+                        exportImage(prod[i]);
+                    }
+
                 }
 
             }
@@ -259,16 +254,34 @@ namespace OnlineTradingSystem
             finally
             {
                 sc.Close();
-
-
+ 
             }
-
-
-
-
+ 
         }
 
         #endregion
+
+
+        public void exportImage(Product prod)
+        {
+            try
+            {
+                // export all the image
+                cmd = new SqlCommand("dbo.UpdateImage " + prod.ID + ",@img", sc);
+                cmd.Parameters.Add(new SqlParameter("@img", prod.img));
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                sc.Close();
+            }
+
+        }
+
 
         #region Registration Data
 
@@ -280,14 +293,14 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-
-                cmd = new SqlCommand("UserData " + "'"
-                + reg.Getpassword + "','"
-                + reg.Getusername + "','"
-                + reg.Getmarketname + "','"
-                + reg.Getstorename + "'", sc);
+                cmd = new SqlCommand("spRegistrationManager " + "'"
+                + reg.Username + "','"
+                + reg.Email + "','"
+                + reg.Password + "','"
+                + reg.Storename + "','"
+                + reg.Marketname + "'", sc);
                 cmd.ExecuteNonQuery();
-
+        
             }
 
             catch (Exception ex)
@@ -310,8 +323,8 @@ namespace OnlineTradingSystem
         #endregion
 
         #region Log in Validation
-        public Store reg = new Store();
-        public Store ValidateUsernamePasswordCompatible(Store reg)
+   
+        public Store ValidateEmailPasswordCompatible(Store reg)
         {
 
 
@@ -319,16 +332,17 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-                cmd = new SqlCommand("dbo.ValidateUsernamePassword  " +
-                 "'" + reg.Getusername + "'" +
-                 ",'" + reg.Getpassword + "'", sc);
+                cmd = new SqlCommand("dbo.spValidateEmailPassword  " +
+                 "'" + reg.Email + "'" +
+                 ",'" + reg.Password + "'", sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    reg.Getstorename = Convert.ToString(reader["StoreName"]);
-                    reg.Getmarketname = Convert.ToString(reader["Market"]);
-                    reg.StoreId = Convert.ToInt16(reader["StoreId"]);
+
+                    reg.StoreId = Convert.ToInt16(reader["bid"]);
+                    reg.Storename = Convert.ToString(reader["bname"]);
+                    reg.Marketname = Convert.ToString(reader["Market"]);
                     reg.RegisterDate = Convert.ToDateTime(reader["RegisterDate"]);
 
                 }
@@ -552,7 +566,7 @@ namespace OnlineTradingSystem
                 sc.Open();
 
 
-                cmd = new SqlCommand("ProductSalesbyStoreId ", sc);
+                cmd = new SqlCommand("spProductSalesbyStoreId ", sc);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@shopeid", sto.StoreId);
                 cmd.ExecuteNonQuery();

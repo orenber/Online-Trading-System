@@ -9,7 +9,7 @@ namespace WebApplication2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DAL dal = new DAL();
+            DA dal = new DA();
             List<Store> store = new List<Store>();
             store = dal.ImportStoreName();
             
@@ -23,7 +23,7 @@ namespace WebApplication2
                 {
                     
                     NavigateUrl = "~/About.aspx?StoreId=" +store[i].StoreId,
-                    Text = store[i].Getstorename
+                    Text = store[i].Storename
 
 
 

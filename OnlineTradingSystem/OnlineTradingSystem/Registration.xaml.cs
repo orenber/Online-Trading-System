@@ -19,15 +19,16 @@ namespace OnlineTradingSystem
             Store regi = new Store()
 
             {
-
-                Getpassword = passwordBoxText_Edit.Password,
-                Getusername = UserNameText_Edit.Text,
-                Getmarketname = MarketNameText_Edit.Text,
-                Getstorename = StoreNameText_Edit.Text
+                Username = UserNameText_Edit.Text,
+                Email = EmailText_Edit.Text,
+                Password = passwordBoxText_Edit.Password,
+             
+                Marketname = MarketNameText_Edit.Text,
+                Storename = StoreNameText_Edit.Text
 
             };
 
-            DAL dal = new DAL();
+            DA dal = new DA();
 
             /* check if no one is register in the same name 
              * if the name is empty return ok 
@@ -41,13 +42,13 @@ namespace OnlineTradingSystem
                 this.Close();
             }
 
-
-
-
-
-
-
-        } 
+        }
         #endregion
+
+
+        public void Cancel_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
