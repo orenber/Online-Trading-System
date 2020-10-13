@@ -15,11 +15,6 @@ using System.Configuration;
 
 
 
-
-
-
-
-
 namespace OnlineTradingSystem
 {
     /// <summary>
@@ -387,15 +382,8 @@ namespace OnlineTradingSystem
         private void Export_data_Click(object sender, RoutedEventArgs e)
         {
             DA sqlmetode = new DA();
-
-
-
             sqlmetode.ExportSqlData(products,regis);
-
-
             Export_data.Click += new RoutedEventHandler(Window_Activated);
-
-
         }
 
 
@@ -698,9 +686,6 @@ namespace OnlineTradingSystem
         private void Product_Sales_Click(object sender, RoutedEventArgs e)
         {
             DA dal = new DA();
-
-
-
             DataTable dt = new DataTable();
             dt = dal.Product_Sales_by_Store_Id(regis);
             dataGrid1.ItemsSource = dt.AsDataView();
@@ -714,22 +699,12 @@ namespace OnlineTradingSystem
         private void Custumer_List_click(object sender, RoutedEventArgs e)
         {
             DA dal = new DA();
-
-
-
             DataTable dt = new DataTable();
             dt = dal.Customer_List_By_Store_Id(regis);
             dataGrid1.ItemsSource = dt.AsDataView();
 
-
-
         }
         #endregion
-
-
-
-
-
 
     }
 
@@ -766,16 +741,3 @@ namespace OnlineTradingSystem
    
 
 }
-
-    
-
-
-
-
-
-
-
-
-
-       
- 

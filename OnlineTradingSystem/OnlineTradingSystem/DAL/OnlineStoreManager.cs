@@ -84,7 +84,7 @@ namespace OnlineTradingSystem.DAL
             try
             {
             
-             .sc.Open();
+              sc.Open();
                 cmd = new SqlCommand("dbo.NumbersId", sc);
                 reader = cmd.ExecuteReader();
 

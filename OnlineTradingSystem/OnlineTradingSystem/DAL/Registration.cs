@@ -173,7 +173,7 @@ namespace OnlineTradingSystem.DAL
             {
                 dal.sc.Open();
 
-                dal.cmd = new SqlCommand("dbo.ValidateUsernamePasswordWeb  " +
+                dal.cmd = new SqlCommand("dbo.spValidateUsernamePassword " +
                  "'"  + registration.email + "'" +
                  ",'" + registration.password + "'", dal.sc);
               

@@ -48,11 +48,10 @@ namespace OnlineTradingSystem
                         ProductName = Convert.ToString(reader["pname"]),
                         Category = Convert.ToString(reader["utype"]),
                         Price = Convert.ToInt32(reader["uprice"]),
-                        Count = Convert.ToInt32(reader["units"]),
                         DateUpdate = Convert.ToDateTime(reader["updateDate"]),
                         Description = Convert.ToString(reader["descr"]), 
+                        Manufactore = Convert.ToString(reader["manu"]),
                         url = Convert.ToString(reader["urlink"])
-     
                     }
                        );
 
@@ -87,12 +86,12 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-                cmd = new SqlCommand("dbo.NumbersId", sc);
+                cmd = new SqlCommand("dbo.spNumbersId", sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    NumberOfId.Add(Convert.ToInt32(reader["ID"].ToString()));
+                    NumberOfId.Add(Convert.ToInt32(reader["code"].ToString()));
 
                 }
                 //cmd.ExecuteNonQuery();
@@ -119,7 +118,7 @@ namespace OnlineTradingSystem
         public List<Store> ImportStoreName()
         {
 
-            List<Store> store = new List<Store>();
+            List<Store> stores = new List<Store>();
 
             try
             {
@@ -130,7 +129,7 @@ namespace OnlineTradingSystem
 
                 while (reader.Read())
                 {
-                    store.Add(new Store{
+                    stores.Add(new Store{
                     
                         Storename=Convert.ToString(reader["bname"]),
                         StoreId=Convert.ToInt16(reader["bid"])
@@ -152,7 +151,7 @@ namespace OnlineTradingSystem
                 sc.Close();
 
             }
-            return store;
+            return stores;
 
         }
 
@@ -166,7 +165,7 @@ namespace OnlineTradingSystem
             {
                 sc.Open();
 
-                cmd = new SqlCommand("dbo.StoreDataById " + stor.StoreId, sc);
+                cmd = new SqlCommand("dbo.spStoreDataById " + stor.StoreId, sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
@@ -206,7 +205,7 @@ namespace OnlineTradingSystem
 
         #region Export Store Data to Sql
 
-        public void ExportSqlData(List<Product> prod, Store reg)
+        public void ExportSqlData(List<Product> prod,Store reg)
         {
 
             try
@@ -219,15 +218,14 @@ namespace OnlineTradingSystem
                 for (int i = 0; prod.Count > i; i++)
                 {
                     cmd = new SqlCommand("dbo.spProductInsertOrUpdate "
-
-                    + reg.StoreId + ","
-                    + prod[i].ID + ",'"
-                    + prod[i].ProductName + "','"
-                    + prod[i].Category + "',"
-                    + prod[i].Price + ",'"
-                    + prod[i].Description + "','"
-                    + prod[i].Manufactore + "','"
-                    + prod[i].url+"'" , sc);
+                        + reg.StoreId + ","
+                        + prod[i].ID + ",'"
+                        + prod[i].ProductName + "','"
+                        + prod[i].Category + "',"
+                        + prod[i].Price + ",'"
+                        + prod[i].Description + "','"
+                        + prod[i].Manufactore + "','"
+                        + prod[i].url+"'" , sc);
 
                     cmd.ExecuteNonQuery();
                     if (prod[i].img==null || prod[i].img.Length == 0)
@@ -246,8 +244,6 @@ namespace OnlineTradingSystem
             {
 
                 MessageBox.Show(ex.Message);
-
-
             }
 
 
@@ -555,47 +551,28 @@ namespace OnlineTradingSystem
 
         public DataTable Product_Sales_by_Store_Id(Store sto)
         {
-
-
-
-
+ 
             try
             {
-
-
+ 
                 sc.Open();
-
-
-                cmd = new SqlCommand("spProductSalesbyStoreId ", sc);
+                cmd = new SqlCommand("dbo.spProductSalesbyStoreId ", sc);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@shopeid", sto.StoreId);
                 cmd.ExecuteNonQuery();
                 GetTable(cmd);
-
-
-
-
-
+ 
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
-
             }
-
-
             finally
             {
                 sc.Close();
-
-
             }
             return GetTable(cmd);
-
-
-
+ 
         } 
         #endregion
 
