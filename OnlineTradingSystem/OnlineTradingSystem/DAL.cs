@@ -16,6 +16,7 @@ namespace OnlineTradingSystem
         private SqlDataAdapter sqldap;
         private SqlDataReader reader;
         private Store reg = new Store();
+        public List<BL.Supplier> suppliers;
 
         public DA()
         {
@@ -26,6 +27,50 @@ namespace OnlineTradingSystem
 
             #endregion
         }
+
+
+
+        public List<BL.Supplier> ImportSupplierData()
+        {
+            suppliers = new List<BL.Supplier>();
+            try
+            {
+                sc.Open();
+
+                cmd = new SqlCommand("dbo.spImportSupplier", sc);
+                reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    suppliers.Add(new BL.Supplier
+                    {
+                        ID = Convert.ToUInt32(reader["sid"].ToString()),
+                        Name = Convert.ToString(reader["sname"]),
+                        Address = Convert.ToString(reader["address"]),
+                        Phone = Convert.ToUInt32(reader["phone"])
+
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+            finally
+            {
+                sc.Close();
+            }
+
+            return suppliers;
+
+        }
+
+
+
+
+
         #region Import Store Data Sql
 
         public List<Product> ImportSqlData(Store reg)
@@ -160,7 +205,6 @@ namespace OnlineTradingSystem
         #region Import Store Data By Id
         public Store ImportStoreDataById(Store stor)
         {
-
             try
             {
                 sc.Open();
@@ -170,36 +214,25 @@ namespace OnlineTradingSystem
 
                 while (reader.Read())
                 {
-
                     stor.Storename = Convert.ToString(reader["StoreName"]);
                     stor.StoreId = Convert.ToInt16(reader["StoreId"]);
                     stor.Username = Convert.ToString(reader["ManegerName"]);
                     stor.RegisterDate = Convert.ToDateTime(reader["RegisterDate"]);
                     stor.Marketname = Convert.ToString(reader["Market"]);
-
                 }
 
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
-
             }
 
             finally
             {
-
                 sc.Close();
-
-
-
             }
 
             return stor;
-
-
         } 
         #endregion
 
@@ -342,14 +375,10 @@ namespace OnlineTradingSystem
                     reg.RegisterDate = Convert.ToDateTime(reader["RegisterDate"]);
 
                 }
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
 
             }
 
@@ -357,13 +386,9 @@ namespace OnlineTradingSystem
             {
                 sc.Close();
 
-
-
             }
 
-
             return reg;
-
 
         }
 
@@ -372,8 +397,6 @@ namespace OnlineTradingSystem
         #region Save Image TO sql Database
         public void SaveImageToSql(List<Product> pro, int index)
         {
-
-
 
             try
             {
@@ -390,17 +413,12 @@ namespace OnlineTradingSystem
 
                 MessageBox.Show(ex.Message);
 
-
-
             }
             finally
             {
 
                 sc.Close();
-
             }
-
-
 
         }
         #endregion
@@ -476,23 +494,14 @@ namespace OnlineTradingSystem
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
-
             }
 
             finally
             {
                 sc.Close();
 
-
-
             }
-
-
-
-
 
             return cus;
 

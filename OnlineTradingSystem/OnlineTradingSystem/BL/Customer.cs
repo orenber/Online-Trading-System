@@ -7,10 +7,12 @@ namespace OnlineTradingSystem.BL
 {
     class Customer
     {
-        private uint id { get; set; }
-        private string name { get; set; }
-        private uint phone_number { get; set; }
-        
+        private uint id;
+        private string name;
+        private uint phone_number;
 
+        public string Name { get => name; set => name = value; }
+        public uint Phone_number { get => phone_number; set => phone_number = value; }
+        public uint Id { get => id; set => id = value; }
     }
 }

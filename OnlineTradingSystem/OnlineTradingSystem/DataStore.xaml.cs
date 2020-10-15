@@ -22,8 +22,6 @@ namespace OnlineTradingSystem
     /// </summary>
     public partial class MainWindow : Window
     {
-        
-        
 
         #region constructor
         public MainWindow(Store _ur)
@@ -57,6 +55,7 @@ namespace OnlineTradingSystem
         #region Creat Product List
 
         private List<Product> products;
+        private List<BL.Supplier> suppliers;
         private List<Product> LoadCollectionData()
         {
             products = new List<Product>();
@@ -66,92 +65,7 @@ namespace OnlineTradingSystem
         
         #endregion
         
-        #region Add Product
 
-        private void AddItem_Click(object sender, RoutedEventArgs e)
-        {
-             
-            // Add item to the data tabel
-            if (products.Count==0)
-            {
-
-            products.Add(new Product());
-            }
-            else
-            {
-
-             
-
-                 
-                products = products[products.Count-1].AddList(products,numbersID);
-            }
-            dataGrid1.Items.Refresh();
-
-
-
-            Product proud = products[products.Count - 1];
-
-
-
-
-            Grid gridborder = new Grid()
-            {
-                Width = 80,
-                Height = 150
-
-            };
-
-
-            piCanv = new Canvas()
-           {
-               Name = "c" + products[products.Count - 1].ID.ToString(),
-               ToolTip = "Click here to add Image",
-               Width = 75,
-               Height = 120,
-               Margin = new Thickness(1, 40, 1, 1),
-               Background = new SolidColorBrush(Colors.LightCyan),
-
-           };
-
-
-
-            Label labelproduct = new Label()
-            {
-                Content = products[products.Count - 1].ID + "\n " + products[products.Count - 1].ProductName
-            };
-
-
-
-            bord.Add(new Border()
-           {
-               Name = "b" + products[products.Count - 1].ID.ToString(),
-               Width = 100,
-               Height = 200,
-               CornerRadius = new CornerRadius(15),
-               BorderThickness = new Thickness(5, 10, 15, 20),
-               Margin = new Thickness(15, 5, 5, 5),
-               BorderBrush = Brushes.SlateBlue,
-               Child = gridborder,
-               Style = Resources["borderStyle"] as Style
-
-
-           });
-
-
-            bord[bord.Count - 1].MouseRightButtonDown += RemoveItem_Click;
-
-            piCanv.MouseLeftButtonDown += piCanv_MouseLeftButtonDown;
-
-            gridborder.Children.Add(piCanv);
-            gridborder.Children.Add(labelproduct);
-
-            Warp.Children.Add(bord[bord.Count - 1]);
-
-
-        }
-
-        
-        #endregion
 
         #region Remove Product
 
@@ -396,9 +310,7 @@ namespace OnlineTradingSystem
         {
           
             List<Int32> numbersdataGirdId = new List<Int32>();
-           
             products=new List<Product>();
-           
             DA sqldata=new DA();
            
             products = sqldata.ImportSqlData(regis);
@@ -412,9 +324,23 @@ namespace OnlineTradingSystem
             dataGrid1.ItemsSource = products;
             dataGrid1.Items.Refresh();
 
+        }
 
+        #endregion
+
+
+        #region Import supplier data
+      
+        private void Import_supplier_Click(object sender, RoutedEventArgs e)
+        {
+            suppliers = new List<BL.Supplier>();
+            suppliers = sqldata.ImportSupplierData();
+ 
+            dataGridSupplier.ItemsSource = suppliers;
+            dataGridSupplier.Items.Refresh();
 
         }
+
 
         #endregion
 
@@ -440,8 +366,9 @@ namespace OnlineTradingSystem
             //}
 
            Import_data_Click(sender,e);
+           Import_supplier_Click(sender, e);
 
-            
+
             dataGrid1.ItemsSource = products;
             dataGrid1.Items.Refresh();
 
@@ -706,12 +633,13 @@ namespace OnlineTradingSystem
         }
         #endregion
 
+ 
     }
 
 
 
 
-        #region Enter new Colume
+    #region Enter new Colume
 
 
     public static class Prompt

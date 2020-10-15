@@ -70,11 +70,11 @@
         </Grid>
 
         <Canvas Name="canvas1" Margin="331,0,23,408">
-            <TextBlock Height="33" Name="NameofStore"  Text="Log In" Canvas.Left="59" Canvas.Top="3" FontSize="25" FontFamily="Showcard Gothic" VerticalAlignment="Top" />
+            <TextBlock Height="33" Name="NameofStore"  Text="Log In" Canvas.Right ="59" Canvas.Top="3" FontSize="25" FontFamily="Showcard Gothic" VerticalAlignment="Top"  HorizontalAlignment="Right" />
             <Image Height="36" Name="image1" Stretch="Fill" Width="37" Source="/OnlineTradingSystem;component/Images/market.jpg" Canvas.Left="15" Canvas.Top="3" />
         </Canvas>
 
-        <TabControl TabStripPlacement="Top" Margin="120,1,0,62" HorizontalAlignment="Left" MinWidth="400" Width="Auto">
+        <TabControl TabStripPlacement="Top" Name="tabsTopControl" Margin="120,1,0,62" HorizontalAlignment="Left" MinWidth="400" Width="Auto">
             <TabItem IsSelected="True" Header="Salse" Height="35" Foreground="Black" BorderBrush="#FF0F0F0F" Cursor="Hand">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
@@ -101,6 +101,30 @@
                               CanUserAddRows="False" CanUserDeleteRows="True"
                               CanUserReorderColumns="True" CanUserResizeColumns="True"
                               CanUserResizeRows="False" RowEditEnding="dataGrid1_RowEditEnding"    Sorting="dataGrid1_Sorting"  >
+                        <DataGrid.RowDetailsTemplate>
+                            <DataTemplate>
+
+                                <Border BorderBrush="Black" >
+                                    <Canvas MinHeight="50">
+
+                                    </Canvas>
+                                </Border>
+                            </DataTemplate>
+                        </DataGrid.RowDetailsTemplate>
+                    </DataGrid>
+                </ScrollViewer>
+            </TabItem>
+            <TabItem Header="Supplier List" Loaded="TabItem_Loaded">
+                <!--DataGrid-->
+
+                <ScrollViewer HorizontalScrollBarVisibility="Auto" Width="2000">
+                    <DataGrid Name="dataGridSupplier" AutoGenerateColumns="False"
+                              CanUserSortColumns="true" RowBackground="LightYellow"
+                              AlternatingRowBackground="LightBlue"
+                              SelectionMode="Extended" RowHeight="30"
+                              CanUserAddRows="True" CanUserDeleteRows="True"
+                              CanUserReorderColumns="True" CanUserResizeColumns="True"
+                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Supplier"    Sorting="dataGrid1_Sorting"  >
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
 

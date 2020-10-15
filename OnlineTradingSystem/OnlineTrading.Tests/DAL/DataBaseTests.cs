@@ -14,9 +14,15 @@ namespace OnlineTradingSystem.DAL.Tests
         [TestMethod()]
         public void DataBaseTest()
         {
-           
 
 
+
+        }
+
+        [TestMethod()]
+        public void ImportSupplierDataTest()
+        {
+            
         }
     }
 }
