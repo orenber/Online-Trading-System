@@ -6,6 +6,9 @@ using System.Windows.Forms;
 using System.Configuration;
 
 
+ 
+
+
 
 namespace OnlineTradingSystem
 {
@@ -16,7 +19,7 @@ namespace OnlineTradingSystem
         private SqlDataAdapter sqldap;
         private SqlDataReader reader;
         private Store reg = new Store();
-        public List<BL.Supplier> suppliers;
+        private List<BL.Supplier> suppliers;
 
         public DA()
         {

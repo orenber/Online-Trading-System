@@ -8,16 +8,11 @@ namespace OnlineTradingSystem.BL
    public class Supplier
     {
         #region data member
-        private uint supplier_id { get; set; }
-        private string name { get; set; }
-        private uint phone { get; set; }
-        private string address { get; set; }
+        private uint supplier_id;
+        private string name;
+        private uint phone;
+        private string address;
         #endregion
-
-
-
-
-
 
 
         #region property
@@ -55,16 +50,6 @@ namespace OnlineTradingSystem.BL
         #endregion
 
     }
-
-
-
-
-
-
-
-
-
-
 
 
 }

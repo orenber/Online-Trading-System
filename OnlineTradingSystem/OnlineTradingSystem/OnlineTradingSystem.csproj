@@ -98,7 +98,9 @@
     <Compile Include="DAL\LogIn.cs" />
     <Compile Include="DAL\OnlineTradingStore.cs" />
     <Compile Include="DAL\Registration.cs" />
-    <Compile Include="DataStoreSupplier.xaml.cs" />
+    <Compile Include="OnlineStoreSupplier.xaml.cs" />
+    <Compile Include="OnlineStoreMenu.xaml.cs" />
+    <Compile Include="OnlineStoreProducts.xaml.cs" />
     <Compile Include="Registration.xaml.cs">
       <DependentUpon>Registration.xaml</DependentUpon>
     </Compile>
@@ -218,12 +220,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\WebApplication2\WebSuperMarket.csproj">
-      <Project>{88140A72-88BF-4CE9-9AA2-0386C00D298B}</Project>
-      <Name>WebSuperMarket</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="obj\" />

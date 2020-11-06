@@ -7,9 +7,9 @@ namespace OnlineTradingSystem.BL
 {
     class Store
     {
-        public uint bid { get; set; }
-        public string name { get; set; }
-        public string address { get; set; }
+        private uint id { get; set; }
+        private string name { get; set; }
+        private string address { get; set; }
 
     }
 }

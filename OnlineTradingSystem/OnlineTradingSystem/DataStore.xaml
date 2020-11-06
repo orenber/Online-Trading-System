@@ -90,17 +90,17 @@
                     </WrapPanel>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Product List" Loaded="TabItem_Loaded">
+            <TabItem Name ="Product_List" Header="Product List" Loaded="TabItem_Loaded">
                 <!--DataGrid-->
 
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" Width="2000">
-                    <DataGrid Name="dataGrid1" AutoGenerateColumns="True"
+                    <DataGrid Name="dataGridProduct" AutoGenerateColumns="True"
                               CanUserSortColumns="true" RowBackground="LightYellow"
                               AlternatingRowBackground="LightBlue"
                               SelectionMode="Extended" RowHeight="30"
                               CanUserAddRows="False" CanUserDeleteRows="True"
                               CanUserReorderColumns="True" CanUserResizeColumns="True"
-                              CanUserResizeRows="False" RowEditEnding="dataGrid1_RowEditEnding"    Sorting="dataGrid1_Sorting"  >
+                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Product"    Sorting="dataGrid_Sorting_Product"  >
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
 
@@ -114,7 +114,7 @@
                     </DataGrid>
                 </ScrollViewer>
             </TabItem>
-            <TabItem Header="Supplier List" Loaded="TabItem_Loaded">
+            <TabItem Name="Supplier_List" Header="Supplier List" Loaded="TabItem_Loaded">
                 <!--DataGrid-->
 
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" Width="2000">
@@ -124,7 +124,7 @@
                               SelectionMode="Extended" RowHeight="30"
                               CanUserAddRows="True" CanUserDeleteRows="True"
                               CanUserReorderColumns="True" CanUserResizeColumns="True"
-                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Supplier"    Sorting="dataGrid1_Sorting"  >
+                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Supplier"    Sorting="dataGrid_Sorting_Supplier"  >
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
 
