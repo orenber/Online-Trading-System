@@ -6,9 +6,6 @@ using System.Windows.Forms;
 using System.Configuration;
 
 
- 
-
-
 
 namespace OnlineTradingSystem
 {
@@ -69,9 +66,6 @@ namespace OnlineTradingSystem
             return suppliers;
 
         }
-
-
-
 
 
         #region Import Store Data Sql

@@ -11,6 +11,10 @@ namespace OnlineTradingSystem
     public partial class MainWindow : Window
     {
 
+        List<Int32> numbersID;
+        DA dal = new DA();
+        DataTable dt;
+
         #region Add Item
 
         private void AddItem_Click(object sender, RoutedEventArgs e)
@@ -38,8 +42,7 @@ namespace OnlineTradingSystem
 
         private void Export_data_Click(object sender, RoutedEventArgs e)
         {
-            DA sqlmetode = new DA();
-            sqlmetode.ExportSqlData(products, regis);
+            sqldata.ExportSqlData(products, regis);
             Export_data.Click += new RoutedEventHandler(Window_Activated);
         }
 
@@ -47,15 +50,12 @@ namespace OnlineTradingSystem
         #endregion
 
         #region Import Data table To GrideData
-        List<Int32> numbersID = new List<Int32>();
+        
 
         private void Import_data_Click(object sender, RoutedEventArgs e)
         {
-
-            List<Int32> numbersdataGirdId = new List<Int32>();
-
-            DA sqldata = new DA();
-
+ 
+            numbersID = new List<Int32>();
             sqldata.ImportStoreName();
             numbersID = sqldata.ImportListNumberId();
             Warp.Children.Clear();
@@ -106,8 +106,7 @@ namespace OnlineTradingSystem
                 }
 
                 finally
-                {
-
+                { 
                     dataGridProduct.Items.Refresh();
                 }
 
@@ -147,13 +146,10 @@ namespace OnlineTradingSystem
 
         #region Product Sales Click
         private void Product_Sales_Click(object sender, RoutedEventArgs e)
-        {
-            DA dal = new DA();
-            DataTable dt = new DataTable();
+        {      
+            dt = new DataTable();
             dt = dal.Product_Sales_by_Store_Id(regis);
-
             dataGridProduct.ItemsSource = dt.AsDataView();
-
 
         }
         #endregion
@@ -162,8 +158,8 @@ namespace OnlineTradingSystem
 
         private void Custumer_List_click(object sender, RoutedEventArgs e)
         {
-            DA dal = new DA();
-            DataTable dt = new DataTable();
+            
+            dt = new DataTable();
             dt = dal.Customer_List_By_Store_Id(regis);
             dataGridProduct.ItemsSource = dt.AsDataView();
 

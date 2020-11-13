@@ -11,10 +11,10 @@
         </Grid.ColumnDefinitions>
 
 
-        <Label Content="email:" Height="28" Margin="36,16,172,44" Name="labelEmail" Grid.ColumnSpan="2" />
+        <Label Content="Email:" Height="28" Margin="36,16,172,44" Name="labelEmail" Grid.ColumnSpan="2" />
         <TextBox Height="23" HorizontalAlignment="Left" Margin="37,21,0,0" Name="email_editBox" VerticalAlignment="Top" Width="120" GotFocus="usernameBox_GotFocus" Grid.Column="1" />
 
-        <Label Content="password:" HorizontalAlignment="Left" Margin="36,39,0,21" Name="labelpassword" Width="67" Grid.ColumnSpan="2" />
+        <Label Content="Password:" HorizontalAlignment="Left" Margin="36,39,0,21" Name="labelpassword" Width="67" Grid.ColumnSpan="2" />
         <PasswordBox Height="23" HorizontalAlignment="Left" Margin="37,50,0,0" Name="passwordBox" VerticalAlignment="Top" Width="120" Grid.Column="1" />
 
         <Button Content="Log In" Height="23" HorizontalAlignment="Left" Margin="168,50,0,0" Name="Login" VerticalAlignment="Top" Width="39" Click="Login_Click" Grid.Column="1" />
