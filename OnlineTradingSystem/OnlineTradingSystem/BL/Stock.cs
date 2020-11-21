@@ -7,9 +7,9 @@ namespace OnlineTradingSystem.BL
 {
     class Stock
     {
-        private uint code { get; set; }
-        private uint bid { get; set; }
-        private uint units { get; set; }
+        private uint code;
+        private uint bid;
+        private uint units;  
 
     }
 }
