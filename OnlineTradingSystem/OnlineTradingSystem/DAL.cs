@@ -264,7 +264,7 @@ namespace OnlineTradingSystem
                     }
                     else
                     {
-                        exportImage(prod[i]);
+                        ExportImage(prod[i]);
                     }
 
                 }
@@ -288,7 +288,7 @@ namespace OnlineTradingSystem
         #endregion
 
 
-        public void exportImage(Product prod)
+        public void ExportImage(Product prod)
         {
             try
             {
