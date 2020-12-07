@@ -118,7 +118,7 @@
                 <!--DataGrid-->
 
                 <ScrollViewer HorizontalScrollBarVisibility="Auto" Width="2000">
-                    <DataGrid Name="dataGridSupplier" AutoGenerateColumns="False"
+                    <DataGrid Name="dataGridSupplier" AutoGenerateColumns="true"
                               CanUserSortColumns="true" RowBackground="LightYellow"
                               AlternatingRowBackground="LightBlue"
                               SelectionMode="Extended" RowHeight="30"
