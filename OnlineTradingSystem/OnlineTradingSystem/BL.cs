@@ -102,8 +102,8 @@ namespace OnlineTradingSystem
         public DateTime DateUpdate { get; set; }
         public string Description { get; set; }
         public string Manufactore { get; set; }
-        public byte[] img { get; set; }
-        public string url { get; set; }
+        public byte[] Img { get; set; }
+        public string Url { get; set; }
 
 
 
@@ -204,8 +204,8 @@ namespace OnlineTradingSystem
         }
          public Int32 CustomerId { get; set; }
          public string Username { get; set; }
-         public string email { get; set; }
-         public string password { get; set; }
+         public string Email { get; set; }
+         public string Password { get; set; }
          public DateTime RegisterDate { get; set; }
      
      }

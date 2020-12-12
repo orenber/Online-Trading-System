@@ -7,10 +7,18 @@ namespace OnlineTradingSystem.BL
 {
     class Purchase
     {
-        private uint bid { get; set; }
-        private uint code { get; set; }
-        private DateTime date { get; set; }
-        private DateTime time { get; set; }
-        private uint units { get; set; }
+        private uint _bid;
+        private uint _total;
+        private DateTime _date;
+        private DateTime _time;
+        private string _type;
+
+
+        public uint Bid { get => _bid; set => _bid = value; }
+        public uint Total { get => _total; set => _total = value; }
+        public DateTime Date { get => _date; set => _date = value; }
+        public DateTime Time { get => _time; set => _time = value; }
+        public string Type { get => _type; set => _type = value; }
+
     }
 }

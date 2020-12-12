@@ -11,8 +11,9 @@ namespace OnlineTradingSystem.BL
         private string name;
         private uint phone_number;
 
+        public uint Id { get => id; set => id = value; }
         public string Name { get => name; set => name = value; }
         public uint Phone_number { get => phone_number; set => phone_number = value; }
-        public uint Id { get => id; set => id = value; }
+       
     }
 }

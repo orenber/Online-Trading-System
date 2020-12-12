@@ -20,7 +20,7 @@ namespace OnlineTradingSystem.DAL.Tests
         }
 
         [TestMethod()]
-        public void validateRegistrationTest()
+        public void ValidateRegistrationTest()
         {
             Assert.Fail();
         }

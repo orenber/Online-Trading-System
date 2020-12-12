@@ -93,7 +93,7 @@ namespace OnlineTradingSystem
                         DateUpdate = Convert.ToDateTime(reader["updateDate"]),
                         Description = Convert.ToString(reader["descr"]), 
                         Manufactore = Convert.ToString(reader["manu"]),
-                        url = Convert.ToString(reader["urlink"])
+                        Url = Convert.ToString(reader["urlink"])
                     }
                        );
 
@@ -255,10 +255,10 @@ namespace OnlineTradingSystem
                         + prod[i].Price + ",'"
                         + prod[i].Description + "','"
                         + prod[i].Manufactore + "','"
-                        + prod[i].url+"'" , sc);
+                        + prod[i].Url+"'" , sc);
 
                     cmd.ExecuteNonQuery();
-                    if (prod[i].img==null || prod[i].img.Length == 0)
+                    if (prod[i].Img==null || prod[i].Img.Length == 0)
                     {
                         continue;
                     }
@@ -294,7 +294,7 @@ namespace OnlineTradingSystem
             {
                 // export all the image
                 cmd = new SqlCommand("dbo.UpdateImage " + prod.ID + ",@img", sc);
-                cmd.Parameters.Add(new SqlParameter("@img", prod.img));
+                cmd.Parameters.Add(new SqlParameter("@img", prod.Img));
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -400,7 +400,7 @@ namespace OnlineTradingSystem
 
                 sc.Open();
                 cmd = new SqlCommand("dbo.UpdateImage " + pro[index].ID + ",@img", sc);
-                cmd.Parameters.Add(new SqlParameter("@img", pro[index].img));
+                cmd.Parameters.Add(new SqlParameter("@img", pro[index].Img));
                 cmd.ExecuteNonQuery();
 
             }
@@ -432,8 +432,8 @@ namespace OnlineTradingSystem
 
                 cmd = new SqlCommand("dbo.InsertNewCustomer '"
                 + customer.Username + "','"
-                + customer.email + "','"
-                + customer.password + "'", sc);
+                + customer.Email + "','"
+                + customer.Password + "'", sc);
 
                 cmd.ExecuteNonQuery();
 
@@ -474,15 +474,15 @@ namespace OnlineTradingSystem
 
                 cmd = new SqlCommand("dbo.ValidateUsernamePasswordWeb  " +
                  "'" + cus.Username + "'" +
-                 ",'" + cus.password + "'", sc);
+                 ",'" + cus.Password + "'", sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
                     cus.CustomerId = Convert.ToInt32(reader["ID"]);
                     cus.Username = Convert.ToString(reader["UserName"]);
-                    cus.email = Convert.ToString(reader["Email"]);
-                    cus.password = Convert.ToString(reader["Password"]);
+                    cus.Email = Convert.ToString(reader["Email"]);
+                    cus.Password = Convert.ToString(reader["Password"]);
                     cus.RegisterDate = Convert.ToDateTime(reader["RegisterDate"]);
 
                 }
