@@ -260,6 +260,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Online Trading System.mdf</DependentUpon>
     </Content>
+    <Content Include="ASPNETDB.MDF">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
