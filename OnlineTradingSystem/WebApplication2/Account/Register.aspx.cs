@@ -23,8 +23,8 @@ namespace WebApplication2.Account
             customer = new Customer()
             {
                 Username=TextBoxUserName.Text,
-                email=TextBoxEmail.Text,
-                password=TextBoxPassword.Text
+                Email=TextBoxEmail.Text,
+                Password=TextBoxPassword.Text
 
 
             };

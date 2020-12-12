@@ -17,18 +17,18 @@ namespace WebApplication2.Account
         {
 
             customer.Username = TextBoxUserName.Text;
-            customer.password = TextBoxPassword.Text;
+            customer.Password = TextBoxPassword.Text;
 
             customer=dal.ValidateUsernamePasswordCompatible(customer);
 
-            if (customer.email == null)
+            if (customer.Email == null)
             {
 
                 Response.Write("Log in Faile");
 
 
             }
-            else if (customer.email !=null)
+            else if (customer.Email !=null)
 
             {
 

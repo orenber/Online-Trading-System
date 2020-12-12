@@ -8,7 +8,7 @@ namespace OnlineTradingSystem
     public partial class MainWindow : Window
     {
 
-        private void add_supplier_click(object sender, RoutedEventArgs e)
+        private void Add_supplier_click(object sender, RoutedEventArgs e)
         {
             suppliers.Add(new BL.Supplier() {
 
@@ -19,7 +19,7 @@ namespace OnlineTradingSystem
 
         #region Import supplier data
 
-        private void show_supplier()
+        private void Show_supplier()
         {
             suppliers = new List<BL.Supplier>();
             suppliers = sqldata.ImportSupplierData();
@@ -31,16 +31,16 @@ namespace OnlineTradingSystem
 
         #endregion
 
-        private void dataGrid_RowEditEnding_Supplier(object sender, DataGridRowEditEndingEventArgs e)
+        private void DataGrid_RowEditEnding_Supplier(object sender, DataGridRowEditEndingEventArgs e)
         {
-            
+
             int indx = dataGridSupplier.SelectedIndex;
             int columnName = dataGridSupplier.CurrentColumn.DisplayIndex;
-            string haeder= dataGridSupplier.CurrentColumn.Header.ToString();
+            string header = dataGridSupplier.CurrentColumn.Header.ToString();
 
         }
 
-        private void dataGrid_Sorting_Supplier(object sender, DataGridSortingEventArgs e)
+        private void DataGrid_Sorting_Supplier(object sender, DataGridSortingEventArgs e)
         {
 
         }

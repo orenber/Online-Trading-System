@@ -12,5 +12,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/aspnetdb_log.ldf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/database1.mdf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/database1_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/online%20trading%20system.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("app_data/online%20trading%20system_log.ldf")]
 
 

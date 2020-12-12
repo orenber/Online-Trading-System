@@ -166,7 +166,7 @@ namespace OnlineTradingSystem.DAL
 
         #region Validate User name Password Compatible
 
-        public bool validateRegistration(Registration registration)
+        public bool ValidateRegistration(Registration registration)
         {
             bool valid = true;
             try

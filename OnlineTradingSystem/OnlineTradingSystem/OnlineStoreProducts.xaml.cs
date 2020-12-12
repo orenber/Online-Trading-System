@@ -27,7 +27,7 @@ namespace OnlineTradingSystem
 
         #endregion
 
-        private void add_product_click(object sender, RoutedEventArgs e)
+        private void Add_product_click(object sender, RoutedEventArgs e)
         {
 
             if (products.Count == 0)
@@ -43,21 +43,20 @@ namespace OnlineTradingSystem
             dataGridProduct.Items.Refresh();
 
             Product proud = products[products.Count - 1];
-            craete_canvas_product(sender, e);
+            Craete_canvas_product(sender, e);
 
         }
         // ******************************
         #region Open File image
         private void Open_Image()
         {
-            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            openFileDialog1.Title = "Select Photos";
-
-            openFileDialog1.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
-
-            openFileDialog1.CheckFileExists = true;
-            openFileDialog1.CheckPathExists = true;
-
+            System.Windows.Forms.OpenFileDialog openFileDialog1 = new System.Windows.Forms.OpenFileDialog()
+            {
+                Title = "Select Photos",
+                Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif",
+                CheckFileExists = true,
+                CheckPathExists = true
+            };
 
             Stream myStream = null;
 
@@ -73,8 +72,9 @@ namespace OnlineTradingSystem
                         {
                             Imgeloc = openFileDialog1.FileName.ToString();
                             string file = openFileDialog1.FileName;
-                            ib = new ImageBrush();
-                            ib.ImageSource = new BitmapImage(new Uri(file, UriKind.Relative));
+                            ib = new ImageBrush() { 
+                            ImageSource = new BitmapImage(new Uri(file, UriKind.Relative)) 
+                                };
                             piCanv.Background = ib;
                             piCanv.Children.Clear();
 
@@ -88,7 +88,7 @@ namespace OnlineTradingSystem
                             int index = products.IndexOf(pid);
                             ///////////////////////////////
 
-                            products[index].img = br.ReadBytes((int)fs.Length);
+                            products[index].Img = br.ReadBytes((int)fs.Length);
                             Saveimg(products, index);
 
                         }
@@ -113,7 +113,7 @@ namespace OnlineTradingSystem
 
         #endregion
 
-        private void piCanv_MouseLeftButtonDown(object sender, EventArgs e)
+        private void PiCanv_MouseLeftButtonDown(object sender, EventArgs e)
         {
 
             piCanv = sender as Canvas;
@@ -150,7 +150,7 @@ namespace OnlineTradingSystem
         }
         #endregion
 
-        private void show_product()
+        private void Show_product()
         {
             products = new List<Product>();
 
@@ -162,7 +162,7 @@ namespace OnlineTradingSystem
 
         }
 
-        private void craete_canvas_product(object sender, RoutedEventArgs e)
+        private void Craete_canvas_product(object sender, RoutedEventArgs e)
         {
 
 
@@ -212,7 +212,7 @@ namespace OnlineTradingSystem
 
             bord[bord.Count - 1].MouseRightButtonDown += RemoveItem_Click;
 
-            piCanv.MouseLeftButtonDown += piCanv_MouseLeftButtonDown;
+            piCanv.MouseLeftButtonDown += PiCanv_MouseLeftButtonDown;
 
             gridborder.Children.Add(piCanv);
             gridborder.Children.Add(labelproduct);
@@ -247,10 +247,10 @@ namespace OnlineTradingSystem
 
             };
 
-            if (products[i].img != null)
+            if (products[i].Img != null)
             {
 
-                byte[] imageBytes = products[i].img;
+                byte[] imageBytes = products[i].Img;
 
                 MemoryStream stream = new MemoryStream(imageBytes);
                 stream.Write(imageBytes, 0, imageBytes.Length);
@@ -305,7 +305,7 @@ namespace OnlineTradingSystem
 
             bord[bord.Count - 1].MouseRightButtonDown += RemoveItem_Click;
 
-            piCanv.MouseLeftButtonDown += piCanv_MouseLeftButtonDown;
+            piCanv.MouseLeftButtonDown += PiCanv_MouseLeftButtonDown;
 
             gridborder.Children.Add(piCanv);
             gridborder.Children.Add(labelproduct);
@@ -324,7 +324,7 @@ namespace OnlineTradingSystem
         #region Data Grid Events
 
 
-        private void addcolum_Click(object sender, RoutedEventArgs e)
+        private void Addcolum_Click(object sender, RoutedEventArgs e)
         {
             string ColumeName = Prompt.ShowDialog();
 
@@ -340,12 +340,12 @@ namespace OnlineTradingSystem
             }
         }
 
-        private void dataGrid1_Loaded(object sender, RoutedEventArgs e)
+        private void DataGrid1_Loaded(object sender, RoutedEventArgs e)
         {
             dataGridProduct.Items.Refresh();
         }
 
-        private void dataGrid1_Sorting(object sender, DataGridSortingEventArgs e)
+        private void DataGrid1_Sorting(object sender, DataGridSortingEventArgs e)
         {
 
             //var b = dataGrid1.ItemsSource;
@@ -357,19 +357,19 @@ namespace OnlineTradingSystem
 
         #endregion
 
-        private void dataGrid1_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        private void DataGrid1_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             var indx = dataGridProduct.SelectedIndex;
             products[indx].DateUpdate = DateTime.Now;
 
         }
 
-        private void dataGrid_RowEditEnding_Product(object sender, DataGridRowEditEndingEventArgs e)
+        private void DataGrid_RowEditEnding_Product(object sender, DataGridRowEditEndingEventArgs e)
         {
 
         }
 
-        private void dataGrid_Sorting_Product(object sender, DataGridSortingEventArgs e)
+        private void DataGrid_Sorting_Product(object sender, DataGridSortingEventArgs e)
         {
 
         }

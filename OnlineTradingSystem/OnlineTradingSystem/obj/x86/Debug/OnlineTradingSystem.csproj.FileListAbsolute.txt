@@ -115,3 +115,5 @@ C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSys
 C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\Database1_log.LDF
 C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\LogIn.baml
 C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\obj\x86\Debug\LogIn.g.cs
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\Online Trading System.mdf
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\App_Data\Online Trading System_log.ldf

@@ -29,7 +29,7 @@ namespace OnlineTradingSystem
 
       
 
-        private void button2_Click(object sender, RoutedEventArgs e)
+        private void Button2_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show(regis.Marketname);
         }
@@ -67,7 +67,7 @@ namespace OnlineTradingSystem
 
         }
 
-        private void usernameBox_GotFocus(object sender, RoutedEventArgs e)
+        private void UsernameBox_GotFocus(object sender, RoutedEventArgs e)
         {
             textWrongValidate.Text = "";
         }

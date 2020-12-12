@@ -145,9 +145,9 @@ namespace WebApplication2
                 try
                 {
                     //check if image exist
-                    if ((Prod[i].img != null) && (Prod[i].img.Length > 200))
+                    if ((Prod[i].Img != null) && (Prod[i].Img.Length > 200))
                     {
-                        MemoryStream ms = new MemoryStream(Prod[i].img);
+                        MemoryStream ms = new MemoryStream(Prod[i].Img);
                         System.Drawing.Image image = System.Drawing.Image.FromStream(ms);
                         image.Save(@"C:\Documents and Settings\user\My Documents\Visual Studio 2010\Projects\OnlineTradingSystem\WebApplication2\Images\imageTest" + Convert.ToString(i) + ".jpg");
                     }
@@ -166,7 +166,7 @@ namespace WebApplication2
                     Width = 150,
                     BorderColor = System.Drawing.Color.Gray,
                     ImageUrl = "~/Images/imageTest" + Convert.ToString(i) + ".jpg",
-                    CssClass = Prod[i].url
+                    CssClass = Prod[i].Url
                 };
 
 
@@ -213,7 +213,7 @@ namespace WebApplication2
 
              
                 
-                buy[b].CheckedChanged += delegate(object s, EventArgs ep) {buy_CheckedChanged(s, ep,Prod[b]); };
+                buy[b].CheckedChanged += delegate(object s, EventArgs ep) {Buy_CheckedChanged(s, ep,Prod[b]); };
 
                 updatepanel1.Triggers.Add(trigger[b]);
                  
@@ -324,7 +324,7 @@ namespace WebApplication2
         
        
 
-       void buy_CheckedChanged(object sender, EventArgs e,Product prod)
+       void Buy_CheckedChanged(object sender, EventArgs e,Product prod)
         {
 
 
@@ -386,7 +386,7 @@ namespace WebApplication2
 
         }
        string myScriptValue;
-        protected void buy_all_product(object sender, EventArgs e)
+        protected void Buy_all_product(object sender, EventArgs e)
         {
 
             goods.AddRange(((List<Goods_bought>)ViewState["Goods"]));
@@ -425,7 +425,7 @@ namespace WebApplication2
 
 
     
-       protected void mygrid_RowDataBound(object sender, GridViewRowEventArgs e)
+       protected void Mygrid_RowDataBound(object sender, GridViewRowEventArgs e)
        {
            if (e.Row.Cells.Count > 1)
 
