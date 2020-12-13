@@ -37,7 +37,7 @@ namespace OnlineTradingSystem
         }
 
         //2.oveloded constructor
-        public Uregistration(string Password, string Username,string email)
+        public Uregistration(string Password, string Username,string Email)
         {
             password = Password;
             username = Username;
@@ -126,7 +126,7 @@ namespace OnlineTradingSystem
                     if (NumberId[i] == Next)
                     {
                        
-                        Next = Next + 1;
+                        Next ++;
                         continue;
 
                     }
@@ -190,7 +190,7 @@ namespace OnlineTradingSystem
     [Serializable]
      class Customer
      {
-        private object p;
+        private readonly object p;
 
         public Customer(object p)
         {

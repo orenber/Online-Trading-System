@@ -9,16 +9,7 @@ namespace OnlineTradingSystem.DAL
     public class OnlineTradingStore
     {
 
-        Manager manager;
-        Stock stock;
-        Product product;
-        Supplier supplier;
-        DataBase database;
 
-
-        
-
- 
 
     }
 }

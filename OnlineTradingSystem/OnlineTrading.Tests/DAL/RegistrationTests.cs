@@ -15,7 +15,7 @@ namespace OnlineTradingSystem.DAL.Tests
         public void RegistrationTest()
         {
 
-            Registration registration = new Registration();
+           
  
         }
 

@@ -42,7 +42,7 @@
                     </Grid.Background>
                     <Button Content="Add Item"   Height="43" HorizontalAlignment="Left" Name="ItemAdd" VerticalAlignment="Top" VerticalContentAlignment="Stretch" Width="89" Margin="14,7,0,0" Click="AddItem_Click" />
                     <ToggleButton Content="Remove Item"  Height="43" HorizontalAlignment="Left" Margin="14,203,0,0" Name="RemoveItem" VerticalAlignment="Top" Width="89" Checked="RemoveItem_Click" />
-                    <Button Content="Add Colum"   Height="43" HorizontalAlignment="Left" Margin="14,56,0,0" Name="addcolum" VerticalAlignment="Top" Width="89" Click="addcolum_Click" />
+                    <Button Content="Add Colum"   Height="43" HorizontalAlignment="Left" Margin="14,56,0,0" Name="addcolum" VerticalAlignment="Top" Width="89" Click="Addcolum_Click" />
                     <Button Content="Export Data" Height="43" HorizontalAlignment="Left" Margin="14,104,0,0" Name="Export_data" VerticalAlignment="Top" Width="89" Click="Export_data_Click"/>
 
                     <Button Content="Main Window" Height="43" HorizontalAlignment="Left" Margin="14,353,0,0" Name="BackMainWindow" VerticalAlignment="Top" Width="89" MouseDoubleClick="BackMainWindow_MouseDoubleClick" />
@@ -100,7 +100,7 @@
                               SelectionMode="Extended" RowHeight="30"
                               CanUserAddRows="False" CanUserDeleteRows="True"
                               CanUserReorderColumns="True" CanUserResizeColumns="True"
-                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Product"    Sorting="dataGrid_Sorting_Product"  >
+                              CanUserResizeRows="False" RowEditEnding="DataGrid_RowEditEnding_Product"    Sorting="DataGrid_Sorting_Product"  >
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
 
@@ -124,7 +124,7 @@
                               SelectionMode="Extended" RowHeight="30"
                               CanUserAddRows="True" CanUserDeleteRows="True"
                               CanUserReorderColumns="True" CanUserResizeColumns="True"
-                              CanUserResizeRows="False" RowEditEnding="dataGrid_RowEditEnding_Supplier"    Sorting="dataGrid_Sorting_Supplier"  >
+                              CanUserResizeRows="False" RowEditEnding="DataGrid_RowEditEnding_Supplier"    Sorting="DataGrid_Sorting_Supplier"  >
                         <DataGrid.RowDetailsTemplate>
                             <DataTemplate>
 

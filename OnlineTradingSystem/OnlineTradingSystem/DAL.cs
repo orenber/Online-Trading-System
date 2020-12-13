@@ -11,11 +11,10 @@ namespace OnlineTradingSystem
 {
     class DA
     {
-        private SqlConnection sc;
+        private readonly SqlConnection sc;
         private SqlCommand cmd;
-        private SqlDataAdapter sqldap;
+        private readonly SqlDataAdapter sqldap;
         private SqlDataReader reader;
-        private Store reg = new Store();
         private List<BL.Supplier> suppliers;
 
         public DA()
@@ -23,7 +22,7 @@ namespace OnlineTradingSystem
             #region  build Sql conection
             string ConnectionStrings = ConfigurationManager.ConnectionStrings["Online Trading System DBConnectionString"].ConnectionString;
             sc = new SqlConnection(ConnectionStrings);
-            SqlDataAdapter sqldap = new SqlDataAdapter();
+            sqldap = new SqlDataAdapter();
 
             #endregion
         }
@@ -352,20 +351,17 @@ namespace OnlineTradingSystem
    
         public Store ValidateEmailPasswordCompatible(Store reg)
         {
-
-
             try
             {
                 sc.Open();
 
                 cmd = new SqlCommand("dbo.spValidateEmailPassword  " +
-                 "'" + reg.Email + "'" +
+                 "'"  + reg.Email + "'" +
                  ",'" + reg.Password + "'", sc);
                 reader = cmd.ExecuteReader();
 
                 while (reader.Read())
                 {
-
                     reg.StoreId = Convert.ToInt16(reader["bid"]);
                     reg.Storename = Convert.ToString(reader["bname"]);
                     reg.Marketname = Convert.ToString(reader["Market"]);
@@ -376,13 +372,11 @@ namespace OnlineTradingSystem
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
-
             }
 
             finally
             {
                 sc.Close();
-
             }
 
             return reg;
@@ -424,40 +418,25 @@ namespace OnlineTradingSystem
 
         public void Insertnewclient(Customer customer)
         {
-
-
             try
             {
                 sc.Open();
-
                 cmd = new SqlCommand("dbo.InsertNewCustomer '"
                 + customer.Username + "','"
                 + customer.Email + "','"
                 + customer.Password + "'", sc);
-
                 cmd.ExecuteNonQuery();
-
-
             }
             catch (Exception ex)
             {
-
                 MessageBox.Show(ex.Message);
-
-
             }
-
 
             finally
             {
                 sc.Close();
 
-
             }
-
-
-
-
         }
 
         #endregion
@@ -560,9 +539,9 @@ namespace OnlineTradingSystem
  
             try
             {
- 
+                
                 sc.Open();
-                cmd = new SqlCommand("dbo.spProductSalesbyStoreId ", sc);
+                cmd = new SqlCommand("dbo.spProductSalesbyStoreId ", sc) { };
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@shopeid", sto.StoreId);
                 cmd.ExecuteNonQuery();
@@ -602,26 +581,20 @@ namespace OnlineTradingSystem
             try
             {
 
-
                 sc.Open();
 
-
-                cmd = new SqlCommand("CustomerListByStoreId ", sc);
-                cmd.CommandType = CommandType.StoredProcedure;
+                cmd = new SqlCommand("CustomerListByStoreId ", sc)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
                 cmd.Parameters.AddWithValue("@shopeid", sto.StoreId);
                 cmd.ExecuteNonQuery();
                 GetTable(cmd);
-
-
-
-
-
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.Message);
-
 
             }
 
@@ -629,12 +602,8 @@ namespace OnlineTradingSystem
             finally
             {
                 sc.Close();
-
-
             }
             return GetTable(cmd);
-
-
         }
 
         #endregion

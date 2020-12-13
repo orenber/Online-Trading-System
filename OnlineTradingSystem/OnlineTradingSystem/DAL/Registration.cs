@@ -11,153 +11,153 @@ namespace OnlineTradingSystem.DAL
     public class Registration
     {
         #region data_member
-        private DataBase dal;
+        private readonly DataBase _dal;
 
-        private string firstName;
-        private string lastName;
-        private string city;
-        private string phone;
+        private string _firstName;
+        private string _lastName;
+        private string _city;
+        private string _phone;
 
-        private string userName;
-        private string password;
-        private string email;
+        private string _userName;
+        private string _password;
+        private string _email;
 
-        private string storeName;
-        private string storeAddress;
-        private string marketType;
+        private string _storeName;
+        private string _storeAddress;
+        private string _marketType;
         #endregion
 
         public Registration()
         {
-            dal = new DataBase();
+            _dal = new DataBase();
 
         }
 
         public string FirstName
         {
-            get{ return firstName; }
+            get{ return _firstName; }
 
             set {
                     if (!string.IsNullOrWhiteSpace(value))
                     {
-                        firstName = value;
+                        _firstName = value;
                     }
                 }
         }
 
         public string LastName
         {
-            get { return lastName; }
+            get { return _lastName; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    lastName = value;
+                    _lastName = value;
                 }
             }
         }
 
         public string City
         {
-            get { return city; }
+            get { return _city; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    city = value;
+                    _city = value;
                 }
             }
         }
 
         public string Phone
         {
-            get { return phone; }
+            get { return _phone; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    phone = value;
+                    _phone = value;
                 }
             }
         }
 
         public string UserName
         {
-            get { return userName; }
+            get { return _userName; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    userName = value;
+                    _userName = value;
                 }
             }
         }
 
         public string Password
         {
-            get { return password; }
+            get { return _password; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    password = value;
+                    _password = value;
                 }
             }
         }
 
         public string Email
         {
-            get { return email; }
+            get { return _email; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    email = value;
+                    _email = value;
                 }
             }
         }
 
         public string StoreName
         {
-            get { return storeName; }
+            get { return _storeName; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    storeName = value;
+                    _storeName = value;
                 }
             }
         }
 
         public string StoreAddress
         {
-            get { return storeAddress; }
+            get { return _storeAddress; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    storeAddress = value;
+                    _storeAddress = value;
                 }
             }
         }
 
         public string MarketType
         {
-            get { return marketType; }
+            get { return _marketType; }
 
             set
             {
                 if (!string.IsNullOrWhiteSpace(value))
                 {
-                    marketType = value;
+                    _marketType = value;
                 }
             }
         }
@@ -171,18 +171,18 @@ namespace OnlineTradingSystem.DAL
             bool valid = true;
             try
             {
-                dal.sc.Open();
+                _dal.sc.Open();
 
-                dal.cmd = new SqlCommand("dbo.spValidateUsernamePassword " +
-                 "'"  + registration.email + "'" +
-                 ",'" + registration.password + "'", dal.sc);
+                _dal.cmd = new SqlCommand("dbo.spValidateUsernamePassword " +
+                 "'"  + registration.Email + "'" +
+                 ",'" + registration.Password + "'", _dal.sc);
               
 
-                while (dal.reader.Read())
+                while (_dal.reader.Read())
                 {
-                    registration.userName = Convert.ToString(dal.reader["UserName"]);
-                    registration.email = Convert.ToString(dal.reader["Email"]);
-                    registration.password = Convert.ToString(dal.reader["Password"]);
+                    registration.UserName = Convert.ToString(_dal.reader["UserName"]);
+                    registration.Email = Convert.ToString(_dal.reader["Email"]);
+                    registration.Password = Convert.ToString(_dal.reader["Password"]);
                 }
 
             }
@@ -195,7 +195,7 @@ namespace OnlineTradingSystem.DAL
 
             finally
             {
-                dal.sc.Close();
+                _dal.sc.Close();
 
             }
 

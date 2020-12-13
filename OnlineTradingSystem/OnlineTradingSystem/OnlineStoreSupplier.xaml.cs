@@ -34,9 +34,7 @@ namespace OnlineTradingSystem
         private void DataGrid_RowEditEnding_Supplier(object sender, DataGridRowEditEndingEventArgs e)
         {
 
-            int indx = dataGridSupplier.SelectedIndex;
-            int columnName = dataGridSupplier.CurrentColumn.DisplayIndex;
-            string header = dataGridSupplier.CurrentColumn.Header.ToString();
+     
 
         }
 

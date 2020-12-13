@@ -24,7 +24,7 @@ namespace OnlineTradingSystem.DAL
 
             string ConnectionStrings = ConfigurationManager.ConnectionStrings["Online Trading System DBConnectionString"].ConnectionString;
             sc = new SqlConnection(ConnectionStrings);
-            SqlDataAdapter sqldap = new SqlDataAdapter();
+            sqldap = new SqlDataAdapter();
 
             #endregion
         }

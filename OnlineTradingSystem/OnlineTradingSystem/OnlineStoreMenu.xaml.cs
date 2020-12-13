@@ -12,7 +12,7 @@ namespace OnlineTradingSystem
     {
 
         List<Int32> numbersID;
-        DA dal = new DA();
+        readonly DA dal;
         DataTable dt;
 
         #region Add Item
@@ -23,10 +23,10 @@ namespace OnlineTradingSystem
             switch (tab.Name)
             {
                 case "Product_List":
-                    add_product_click(sender, e);
+                    Add_product_click(sender, e);
                     break;
                 case "Supplier_List":
-                    add_supplier_click(sender, e);
+                    Add_supplier_click(sender, e);
 
                     break;
 
@@ -60,8 +60,8 @@ namespace OnlineTradingSystem
             numbersID = sqldata.ImportListNumberId();
             Warp.Children.Clear();
 
-            show_product();
-            show_supplier();
+            Show_product();
+            Show_supplier();
 
         }
 
@@ -124,11 +124,13 @@ namespace OnlineTradingSystem
         {
             public static string ShowDialog()
             {
-                System.Windows.Forms.Form prompt = new System.Windows.Forms.Form();
-                prompt.Width = 200;
-                prompt.Height = 150;
-                prompt.Left = 0;
-                prompt.Text = "New Column";
+                System.Windows.Forms.Form prompt = new System.Windows.Forms.Form()
+                {
+                    Width = 200,
+                    Height = 150,
+                    Left = 0,
+                    Text = "New Column"
+                };
                 System.Windows.Forms.Label textLabel = new System.Windows.Forms.Label() { Left = 50, Top = 20, Text = "Enter new Colume" };
                 System.Windows.Forms.TextBox textBox = new System.Windows.Forms.TextBox() { Left = 50, Top = 50, Width = 100 };
                 System.Windows.Forms.Button confirmation = new System.Windows.Forms.Button() { Text = "Ok", Left = 90, Width = 50, Top = 70 };
