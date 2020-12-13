@@ -265,8 +265,9 @@ namespace OnlineTradingSystem
                 BitObj.StreamSource = ms;
                 BitObj.EndInit();
 
-                ib = new ImageBrush();
-                ib.ImageSource = BitObj;
+                ib = new ImageBrush() { 
+                ImageSource = BitObj
+                };
                 piCanv.Background = ib;
             }
 
@@ -331,8 +332,11 @@ namespace OnlineTradingSystem
             if (string.IsNullOrWhiteSpace(ColumeName) == false)
             {
                 dynamic product = new Product();
-                DataGridTextColumn textColumn = new DataGridTextColumn();
-                textColumn.Header = ColumeName;
+                DataGridTextColumn textColumn = new DataGridTextColumn()
+                {
+                Header = ColumeName
+                };
+              
 
                 // textColumn.Binding = new Binding("FirstName");
                 dataGridProduct.Columns.Add(textColumn);

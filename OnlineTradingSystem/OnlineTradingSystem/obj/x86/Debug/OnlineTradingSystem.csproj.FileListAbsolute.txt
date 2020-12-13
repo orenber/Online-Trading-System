@@ -152,3 +152,4 @@ C:\Users\OWNER\source\repos\orenber\Online-Trading-System\OnlineTradingSystem\On
 C:\Users\OWNER\source\repos\orenber\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.exe.config
 C:\Users\OWNER\source\repos\orenber\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.exe
 C:\Users\OWNER\source\repos\orenber\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\OnlineTradingSystem.pdb
+C:\Users\orenber\Documents\GitHub\Project\Online-Trading-System\OnlineTradingSystem\OnlineTradingSystem\bin\Debug\ASPNETDB.MDF
